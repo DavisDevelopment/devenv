@@ -1,0 +1,54 @@
+" initialize pathogen
+execute pathogen#infect()
+
+set autoindent
+set smartindent
+
+set fileformat=unix
+set encoding=utf-8
+
+syntax on
+syntax enable
+colorscheme monokai
+
+filetype plugin indent on
+
+set nowrap
+
+set smarttab
+
+" auto-indent to the same indent-level as the previous line
+set copyindent
+
+" show line-numbers
+set number
+
+" map double-tap of 'j' key to exit insert-mode
+imap jj <esc>
+
+" map double-tap of 'k' key to quick-save (Exit Insert-Mode + :wq)
+imap kk <esc>:wq<cr>
+
+map mk <esc>:w<cr>:make<cr><cr>
+
+" map 's' plus  doublt-tap of 'k' key in regular-mode to quick-save
+map skk :wq!<cr>
+
+" When ctrl+n+t is pressed, open a new nerd-tree
+map <C-n><C-t> :NERDTreeTabsToggle<cr>
+
+" When 'o' is double-tapped in regular-mode, open the current file
+map oo :!xdg-open '%:p'<cr><cr>
+
+" ctrl+a selects whole file
+map <C-a> <esc>ggVG<CR>
+
+" double-tap '.' to jump to next tab
+map .. :tabn<cr>
+map ,, :tabp<cr>
+
+
+map <tab><right> :tabn<cr>
+map <tab><left> :tabp<cr>
+map <tab><down> :tabclose<cr>
+map <F5> :edit<cr>
