@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# If a given directory is found, delete it
 RemoveIfPresent() {
 	if [ -d "$1" ]; then
 		rm -rf "$1";
@@ -14,6 +15,7 @@ Install () {
 	git clone "https://github.com/$1/$2"
 }
 
+# Install all relevant packages
 install_packages() {
 	cd ~/.vim/bundle
 

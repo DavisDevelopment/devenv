@@ -1,6 +1,7 @@
 
-source ~/.devenv/vim/packages.sh
+. ~/.devenv/vim/packages.sh
 
+# Install commands used to install the vim-setup
 install_commands () {
     sudo apt-get install wget curl vim
 }
@@ -24,8 +25,8 @@ install_monokai() {
 }
 
 echo 'Purging any/all pre-existing vim-setup'
-RemoveIfPresent ~/.vim/autoload
-RemoveIfPresent ~/.vim/bundle
+RemoveIfPresent ~/.vim/autoload/
+RemoveIfPresent ~/.vim/bundle/
 
 echo 'Constructing new vim-setup'
 install_commands
