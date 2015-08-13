@@ -1,27 +1,37 @@
 " initialize pathogen
 execute pathogen#infect()
 
+" enable advanced indentation features
 set autoindent
 set smartindent
 
+" specify encodings and such
 set fileformat=unix
 set encoding=utf-8
 
+" do some stuff?
+set nowrap
+set smarttab
+" show line-numbers
+set number
+
+" enable syntax highlighting
 syntax on
 syntax enable
+
+" Enable the color-scheme
 colorscheme monokai
-
 filetype plugin indent on
-
-set nowrap
-
-set smarttab
 
 " auto-indent to the same indent-level as the previous line
 set copyindent
 
-" show line-numbers
-set number
+" configure auto-completion
+set autowrite
+set completeopt=menu
+
+" ctrl+k initiates auto-completion
+imap <C-k> <C-x><C-o>
 
 " map double-tap of 'j' key to exit insert-mode
 imap jj <esc>
